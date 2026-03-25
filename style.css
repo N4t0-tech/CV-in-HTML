@@ -45,6 +45,22 @@ table {
     padding-left: 20px;
 }
 
+/* Foto de perfil en contacto */
+.contact-layout {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border: 2px solid #808080;
+    flex-shrink: 0;
+}
+
 /* Espaciado entre fieldsets */
 .window-body > fieldset {
     margin-bottom: 10px;
