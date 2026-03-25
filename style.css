@@ -12,6 +12,27 @@ body {
     min-height: 100vh;
 }
 
+/* DVD bouncing image */
+@keyframes dvd-x {
+    from { left: 0; }
+    to   { left: calc(100vw - 160px); }
+}
+
+@keyframes dvd-y {
+    from { top: 0; }
+    to   { top: calc(100vh - 120px); }
+}
+
+#dvd {
+    position: fixed;
+    width: 160px;
+    pointer-events: none;
+    z-index: 0;
+    animation:
+        dvd-x 7s linear infinite alternate,
+        dvd-y 5s linear infinite alternate;
+}
+
 .desktop {
     display: flex;
     justify-content: center;
