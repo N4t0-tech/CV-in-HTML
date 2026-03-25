@@ -45,6 +45,75 @@ table {
     padding-left: 20px;
 }
 
+/* === ANIMACIÓN: ventana se abre al cargar === */
+@keyframes window-open {
+    0%   { transform: scale(0.3); opacity: 0; }
+    60%  { transform: scale(1.03); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.main-window {
+    animation: window-open 0.35s ease-out forwards;
+    transform-origin: top center;
+}
+
+/* === ANIMACIÓN: fieldsets entran en cascada === */
+@keyframes slide-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.window-body > fieldset {
+    opacity: 0;
+    animation: slide-in 0.3s ease-out forwards;
+}
+
+.window-body > fieldset:nth-child(1) { animation-delay: 0.3s; }
+.window-body > fieldset:nth-child(2) { animation-delay: 0.45s; }
+.window-body > fieldset:nth-child(3) { animation-delay: 0.6s; }
+.window-body > fieldset:nth-child(4) { animation-delay: 0.75s; }
+.window-body > fieldset:nth-child(5) { animation-delay: 0.9s; }
+.window-body > fieldset:nth-child(6) { animation-delay: 1.05s; }
+.window-body > fieldset:nth-child(7) { animation-delay: 1.2s; }
+.window-body > fieldset:nth-child(8) { animation-delay: 1.35s; }
+
+/* === HOVER en fieldsets === */
+.window-body > fieldset {
+    transition: box-shadow 0.15s ease;
+}
+
+.window-body > fieldset:hover {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a, 4px 4px 0px rgba(0,0,0,0.3);
+}
+
+/* === ANIMACIÓN: foto de perfil === */
+@keyframes photo-in {
+    from { opacity: 0; transform: scale(0.7) rotate(-5deg); }
+    to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+.profile-photo {
+    animation: photo-in 0.4s ease-out 0.3s both;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.08);
+    border-color: #000080;
+}
+
+/* === ANIMACIÓN: cursor parpadeante en title-bar === */
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+.title-bar-text::after {
+    content: "▌";
+    animation: blink-cursor 1s step-end infinite;
+    margin-left: 2px;
+}
+
 /* Foto de perfil en contacto */
 .contact-layout {
     display: flex;
