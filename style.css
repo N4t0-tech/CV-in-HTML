@@ -78,34 +78,6 @@ table {
     transform-origin: top center;
 }
 
-/* === ANIMACIÓN: fieldsets entran en cascada === */
-@keyframes slide-in {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-.window-body > fieldset {
-    opacity: 0;
-    animation: slide-in 0.3s ease-out forwards;
-}
-
-.window-body > fieldset:nth-child(1) { animation-delay: 0.3s; }
-.window-body > fieldset:nth-child(2) { animation-delay: 0.45s; }
-.window-body > fieldset:nth-child(3) { animation-delay: 0.6s; }
-.window-body > fieldset:nth-child(4) { animation-delay: 0.75s; }
-.window-body > fieldset:nth-child(5) { animation-delay: 0.9s; }
-.window-body > fieldset:nth-child(6) { animation-delay: 1.05s; }
-.window-body > fieldset:nth-child(7) { animation-delay: 1.2s; }
-.window-body > fieldset:nth-child(8) { animation-delay: 1.35s; }
-
-/* === HOVER en fieldsets === */
-.window-body > fieldset {
-    transition: box-shadow 0.15s ease;
-}
-
-.window-body > fieldset:hover {
-    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a, 4px 4px 0px rgba(0,0,0,0.3);
-}
 
 /* === ANIMACIÓN: foto de perfil === */
 @keyframes photo-in {
