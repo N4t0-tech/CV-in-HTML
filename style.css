@@ -3,6 +3,11 @@
     font-size: 14px;
 }
 
+.bi {
+    vertical-align: middle;
+    font-size: 1.2em;
+}
+
 /* Desktop Win98 */
 body {
     background-color: #008080;
