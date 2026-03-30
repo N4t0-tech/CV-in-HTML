@@ -27,15 +27,15 @@
             <div class="window-body">
 
                 <!-- Header / Info personal -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Información de Contacto</legend>
-                    <div class="contact-layout">
-                        <img src="src/perfil.jpg" alt="Foto de perfil" class="profile-photo">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="src/perfil.jpg" alt="Foto de perfil" class="profile-photo flex-shrink-0">
                         <div>
-                            <p><strong>Renato Campos González</strong> — Tecnólogo en Telecomunicaciones</p>
-                            <p>Correo: Renaxd13@gmail.com &nbsp;|&nbsp; Fono: +56 9 5702 8226</p>
-                            <p>Edad: 23 años &nbsp;|&nbsp; Nacionalidad: Chilena &nbsp;|&nbsp; Ubicación: Santiago, Chile</p>
-                            <p>
+                            <p class="mb-1"><strong>Renato Campos González</strong> — Tecnólogo en Telecomunicaciones</p>
+                            <p class="mb-1">Correo: Renaxd13@gmail.com &nbsp;|&nbsp; Fono: +56 9 5702 8226</p>
+                            <p class="mb-1">Edad: 23 años &nbsp;|&nbsp; Nacionalidad: Chilena &nbsp;|&nbsp; Ubicación: Santiago, Chile</p>
+                            <p class="mb-0">
                                 GitHub: <a href="https://github.com/N4t0-tech" target="_blank">github.com/N4t0-tech</a>
                                 &nbsp;|&nbsp;
                                 Instagram: <a href="https://www.instagram.com/its._rnto" target="_blank">@its._rnto</a>
@@ -45,9 +45,9 @@
                 </fieldset>
 
                 <!-- Objetivo -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Objetivo Profesional</legend>
-                    <p>
+                    <p class="mb-0">
                         Persona responsable, puntual y con excelente capacidad para el trabajo en equipo. Experiencia en desarrollo de software,
                         redes de telecomunicaciones y sistemas de seguridad electrónica. Conocimientos en desarrollo web full stack, aplicaciones
                         móviles, configuración de servidores, routers y switches Cisco, así como en sistemas de CCTV, IoT y domótica.
@@ -56,35 +56,43 @@
                 </fieldset>
 
                 <!-- Experiencia -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Experiencia Profesional / Académica</legend>
 
-                    <p><strong>Practicante Tecnólogo en Telecomunicaciones — Empresa de Desarrollo de Software</strong></p>
-                    <p><em>Altech Limitada</em> — Santiago, Chile | 2024</p>
-                    <ul>
-                        <li>Desarrollo de sistema de gestión de recetas médicas con Django, Vue.js y PostgreSQL.</li>
-                        <li>Desarrollo de app móvil de gestión de gastos (<em>Contable</em>) con React Native.</li>
-                        <li>Integración de OCR mediante AWS Textract para procesamiento de boletas.</li>
-                        <li>Implementación de calculadoras tributarias chilenas en la app móvil.</li>
-                        <li>Trabajo con metodologías ágiles bajo supervisión directa del equipo de desarrollo.</li>
-                        <li>Diseño UX: análisis de brechas y planificación de sistema de agendamiento.</li>
-                    </ul>
+                    <div class="card mb-2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-1"><strong>Practicante Tecnólogo en Telecomunicaciones — Empresa de Desarrollo de Software</strong></h6>
+                            <p class="card-subtitle text-muted mb-2"><em>Altech Limitada</em> — Santiago, Chile | 2024</p>
+                            <ul class="mb-0">
+                                <li>Desarrollo de sistema de gestión de recetas médicas con Django, Vue.js y PostgreSQL.</li>
+                                <li>Desarrollo de app móvil de gestión de gastos (<em>Contable</em>) con React Native.</li>
+                                <li>Integración de OCR mediante AWS Textract para procesamiento de boletas.</li>
+                                <li>Implementación de calculadoras tributarias chilenas en la app móvil.</li>
+                                <li>Trabajo con metodologías ágiles bajo supervisión directa del equipo de desarrollo.</li>
+                                <li>Diseño UX: análisis de brechas y planificación de sistema de agendamiento.</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                    <p><strong>Practicante Técnico en Telecomunicaciones</strong></p>
-                    <p><em>Grupo SSA S.A</em> — Diciembre 2022 - Marzo 2023</p>
-                    <ul>
-                        <li>Soporte en instalación y configuración de CCTV.</li>
-                        <li>Instalación de sistemas de citofonía, control de acceso y alarmas.</li>
-                        <li>Automatización de portones y sistemas de seguridad electrónica.</li>
-                        <li>Trabajo con equipos Dahua e Hikvision, NVR y sistemas PoE.</li>
-                    </ul>
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-1"><strong>Practicante Técnico en Telecomunicaciones</strong></h6>
+                            <p class="card-subtitle text-muted mb-2"><em>Grupo SSA S.A</em> — Diciembre 2022 - Marzo 2023</p>
+                            <ul class="mb-0">
+                                <li>Soporte en instalación y configuración de CCTV.</li>
+                                <li>Instalación de sistemas de citofonía, control de acceso y alarmas.</li>
+                                <li>Automatización de portones y sistemas de seguridad electrónica.</li>
+                                <li>Trabajo con equipos Dahua e Hikvision, NVR y sistemas PoE.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <!-- Educación -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Educación</legend>
-                    <table>
-                        <thead>
+                    <table class="table table-bordered table-sm mb-0">
+                        <thead class="table-secondary">
                             <tr>
                                 <th>Título / Programa</th>
                                 <th>Institución</th>
@@ -112,74 +120,114 @@
                 </fieldset>
 
                 <!-- Habilidades -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Habilidades Técnicas</legend>
-
-                    <div class="skills-grid">
-                        <fieldset>
-                            <legend>Redes y Telecomunicaciones</legend>
-                            <ul>
-                                <li>Routers y switches Cisco (OSPF, EIGRP, BGP)</li>
-                                <li>MPLS, L3VPN (VRF/MP-BGP), L2VPN (EoMPLS)</li>
-                                <li>NAT, Policy-Based Routing con ACLs</li>
-                                <li>CCTV, control de acceso, IoT y domótica</li>
-                                <li>Redes inalámbricas y diagnóstico de fallas</li>
-                            </ul>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Desarrollo de Software</legend>
-                            <ul>
-                                <li>Django / Python, Vue.js, React, React Native</li>
-                                <li>Java (Spring Boot) — Full Stack</li>
-                                <li>PostgreSQL, MySQL</li>
-                                <li>Git, Docker</li>
-                                <li>C++ con Raylib (videojuegos)</li>
-                            </ul>
-                        </fieldset>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <fieldset>
+                                <legend>Redes y Telecomunicaciones</legend>
+                                <ul class="mb-0">
+                                    <li>Routers y switches Cisco (OSPF, EIGRP, BGP)</li>
+                                    <li>MPLS, L3VPN (VRF/MP-BGP), L2VPN (EoMPLS)</li>
+                                    <li>NAT, Policy-Based Routing con ACLs</li>
+                                    <li>CCTV, control de acceso, IoT y domótica</li>
+                                    <li>Redes inalámbricas y diagnóstico de fallas</li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset>
+                                <legend>Desarrollo de Software</legend>
+                                <ul class="mb-0">
+                                    <li>Django / Python, Vue.js, React, React Native</li>
+                                    <li>Java (Spring Boot) — Full Stack</li>
+                                    <li>PostgreSQL, MySQL</li>
+                                    <li>Git, Docker</li>
+                                    <li>C++ con Raylib (videojuegos)</li>
+                                </ul>
+                            </fieldset>
+                        </div>
                     </div>
                 </fieldset>
 
                 <!-- Herramientas -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Herramientas</legend>
-                    <ul class="tools-list">
-                        <li>Cisco IOS / IOU Web</li>
-                        <li>WireShark</li>
-                        <li>Nmap</li>
-                        <li>SSH</li>
-                        <li>Linux (Arch Linux)</li>
-                        <li>AWS (Textract)</li>
-                        <li>VirtualBox</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Bitbucket</li>
-                        <li>Docker</li>
-                        <li>VS Code</li>
-                        <li>Packet Tracer</li>
-                        <li>GNS3</li>
-                        <li>Raylib</li>
-                    </ul>
+                    <div class="d-flex flex-wrap gap-1">
+                        <span class="badge text-bg-secondary">Cisco IOS / IOU Web</span>
+                        <span class="badge text-bg-secondary">WireShark</span>
+                        <span class="badge text-bg-secondary">Nmap</span>
+                        <span class="badge text-bg-secondary">SSH</span>
+                        <span class="badge text-bg-secondary">Linux (Arch Linux)</span>
+                        <span class="badge text-bg-secondary">AWS (Textract)</span>
+                        <span class="badge text-bg-secondary">VirtualBox</span>
+                        <span class="badge text-bg-secondary">Git</span>
+                        <span class="badge text-bg-secondary">GitHub</span>
+                        <span class="badge text-bg-secondary">Bitbucket</span>
+                        <span class="badge text-bg-secondary">Docker</span>
+                        <span class="badge text-bg-secondary">VS Code</span>
+                        <span class="badge text-bg-secondary">Packet Tracer</span>
+                        <span class="badge text-bg-secondary">GNS3</span>
+                        <span class="badge text-bg-secondary">Raylib</span>
+                    </div>
                 </fieldset>
 
                 <!-- Proyectos -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Proyectos Destacados</legend>
-                    <ul>
-                        <li><strong>Tenebrarium:</strong> RPG medieval isométrico desarrollado en C++ con Raylib. Proyecto personal en desarrollo activo.</li>
-                        <li><strong>Contable:</strong> App móvil de gestión de gastos en React Native con OCR (AWS Textract) para lectura de boletas.</li>
-                        <li><strong>Sistema de Recetas Médicas:</strong> Plataforma web con Django, Vue.js y PostgreSQL.</li>
-                        <li><strong>Tesis de Ciberseguridad:</strong> Co-autor de investigación sobre ciberseguridad para Pymes chilenas, marco regulatorio (Ley N° 21.663) y manual práctico de seguridad.</li>
-                    </ul>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-1">Tenebrarium</h6>
+                                    <p class="card-text mb-0">RPG medieval isométrico desarrollado en C++ con Raylib. Proyecto personal en desarrollo activo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-1">Contable</h6>
+                                    <p class="card-text mb-0">App móvil de gestión de gastos en React Native con OCR (AWS Textract) para lectura de boletas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-1">Sistema de Recetas Médicas</h6>
+                                    <p class="card-text mb-0">Plataforma web con Django, Vue.js y PostgreSQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-1">Tesis de Ciberseguridad</h6>
+                                    <p class="card-text mb-0">Co-autor de investigación sobre ciberseguridad para Pymes chilenas, marco regulatorio (Ley N° 21.663) y manual práctico de seguridad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <!-- Idiomas -->
-                <fieldset>
+                <fieldset class="mb-3">
                     <legend>Idiomas</legend>
-                    <ul>
-                        <li>Español: Nivel nativo</li>
-                        <li>Inglés: Lectura fluida, conversacional intermedio</li>
-                    </ul>
+                    <div class="row g-2">
+                        <div class="col-sm-6">
+                            <p class="mb-1"><strong>Español</strong> — Nivel nativo</p>
+                            <div class="progress" style="height: 12px;">
+                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-1"><strong>Inglés</strong> — Lectura fluida, conversacional intermedio</p>
+                            <div class="progress" style="height: 12px;">
+                                <div class="progress-bar bg-info" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
             </div><!-- /window-body -->
