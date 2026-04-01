@@ -45,9 +45,30 @@ body {
 }
 
 /* Table styling */
-table {
+.edu-table {
     width: 100%;
     border-collapse: collapse;
+}
+
+.edu-table th,
+.edu-table td {
+    padding: 4px 8px;
+    border: 1px solid #808080;
+    text-align: left;
+    vertical-align: top;
+}
+
+.edu-table th {
+    background-color: #c0c0c0;
+}
+
+.edu-table td:nth-child(1) { width: 50%; }
+.edu-table td:nth-child(2) { width: 35%; }
+.edu-table td:nth-child(3) { width: 15%; white-space: nowrap; }
+
+/* Cards mobile (ocultas en desktop) */
+.edu-cards {
+    display: none;
 }
 
 /* Skills dos columnas */
@@ -129,12 +150,47 @@ table {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
     body {
         padding: 8px;
+    }
+
+    /* Tabla educación: ocultar en mobile, mostrar cards */
+    .edu-table {
+        display: none;
+    }
+
+    .edu-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .edu-card {
+        border: 2px solid #808080;
+        padding: 6px 8px;
+        background-color: #fff;
+    }
+
+    .edu-card p {
+        margin: 0;
+        padding: 1px 0;
+    }
+
+    .edu-card .edu-title {
+        font-weight: bold;
+    }
+
+    .edu-card .edu-inst {
+        color: #000080;
+    }
+
+    .edu-card .edu-year {
+        font-size: 12px;
+        color: #444;
     }
 }
