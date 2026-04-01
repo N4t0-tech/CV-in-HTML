@@ -1,6 +1,6 @@
 /* Sobreescribir fuente base de 98.css */
 * {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Desktop Win98 */
@@ -131,13 +131,13 @@ body {
 /* Foto de perfil en contacto */
 .contact-layout {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
 }
 
 .profile-photo {
-    width: 100px;
-    height: 100px;
+    width: 190px;
+    height: 190px;
     object-fit: cover;
     object-position: top;
     border: 2px solid #808080;
@@ -151,15 +151,63 @@ body {
 
 /* Responsive */
 @media (max-width: 1000px) {
+
+    body {
+        padding: 4px;
+    }
+
+    .desktop {
+        padding: 4px 0;
+    }
+
+    /* Ventana ocupa todo el ancho */
+    .main-window {
+        max-width: 100%;
+    }
+
+    /* Title bar: evitar overflow de texto */
+    .title-bar-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    /* Foto de perfil en mobile */
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Contacto: cada item en su propia línea, sin separadores */
+    .contact-info {
+        font-size: 13px;
+    }
+
+    .contact-info .sep {
+        display: none;
+    }
+
+    .contact-info .ci {
+        display: block;
+    }
+
+    .contact-info p {
+        margin: 2px 0;
+    }
+
+    .contact-title {
+        display: block;
+        font-size: 12px;
+        color: #444;
+    }
+
+    /* Skills: una columna */
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
-    body {
-        padding: 8px;
-    }
-
-    /* Tabla educación: ocultar en mobile, mostrar cards */
+    /* Tabla educación: ocultar, mostrar cards */
     .edu-table {
         display: none;
     }
@@ -192,5 +240,10 @@ body {
     .edu-card .edu-year {
         font-size: 12px;
         color: #444;
+    }
+
+    /* DVD más pequeño en mobile */
+    #dvd {
+        width: 80px;
     }
 }
