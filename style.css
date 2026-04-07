@@ -247,3 +247,48 @@ body {
         width: 80px;
     }
 }
+
+/* === IMPRESIÓN / EXPORTAR PDF === */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
+    #dvd {
+        display: none;
+    }
+
+    .desktop {
+        padding: 0;
+    }
+
+    .main-window {
+        animation: none;
+        max-width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
+    .title-bar {
+        display: none;
+    }
+
+    .window-body {
+        padding: 12px;
+    }
+
+    .title-bar-text::after {
+        display: none;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    fieldset {
+        page-break-inside: avoid;
+    }
+}
