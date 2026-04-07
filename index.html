@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Renato Campos González</title>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div id="mode-toggle">
-        <button id="toggle-btn" onclick="toggleMode()">Modo Serio</button>
+        <button id="toggle-btn" onclick="toggleMode()">Modo Profesional</button>
     </div>
 
     <img id="dvd" src="https://i.pinimg.com/originals/3e/ce/76/3ece7660379bbb66349b44d0eb901063.gif" alt="">
@@ -216,7 +218,7 @@
     <script>
         function toggleMode() {
             const serious = document.body.classList.toggle('serious');
-            document.getElementById('toggle-btn').textContent = serious ? 'Modo Personal' : 'Modo Serio';
+            document.getElementById('toggle-btn').textContent = serious ? 'Modo Personal' : 'Modo Profesional';
             localStorage.setItem('cv-mode', serious ? 'serious' : 'personal');
         }
         if (localStorage.getItem('cv-mode') === 'serious') {

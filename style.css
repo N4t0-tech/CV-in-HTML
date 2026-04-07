@@ -230,6 +230,11 @@ body {
 /* === MODO SERIO === */
 body.serious {
     background: #f0f2f5;
+    font-family: 'Lato', sans-serif !important;
+}
+
+body.serious * {
+    font-family: 'Lato', sans-serif !important;
 }
 
 body.serious #dvd {
