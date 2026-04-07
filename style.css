@@ -100,21 +100,6 @@ body {
 }
 
 
-/* === ANIMACIÓN: foto de perfil === */
-@keyframes photo-in {
-    from { opacity: 0; transform: scale(0.7) rotate(-5deg); }
-    to   { opacity: 1; transform: scale(1) rotate(0deg); }
-}
-
-.profile-photo {
-    animation: photo-in 0.4s ease-out 0.3s both;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.profile-photo:hover {
-    transform: scale(1.08);
-    border-color: #000080;
-}
 
 /* === ANIMACIÓN: cursor parpadeante en title-bar === */
 @keyframes blink-cursor {
@@ -128,21 +113,6 @@ body {
     margin-left: 2px;
 }
 
-/* Foto de perfil en contacto */
-.contact-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.profile-photo {
-    width: 190px;
-    height: 190px;
-    object-fit: cover;
-    object-position: top;
-    border: 2px solid #808080;
-    flex-shrink: 0;
-}
 
 /* Espaciado entre fieldsets */
 .window-body > fieldset {
@@ -173,13 +143,7 @@ body {
         font-size: 12px;
     }
 
-    /* Foto de perfil en mobile */
-    .profile-photo {
-        width: 80px;
-        height: 80px;
-    }
-
-    /* Contacto: cada item en su propia línea, sin separadores */
+/* Contacto: cada item en su propia línea, sin separadores */
     .contact-info {
         font-size: 13px;
     }
@@ -248,6 +212,104 @@ body {
     }
 }
 
+/* === TOGGLE DE MODO === */
+#mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#toggle-btn {
+    cursor: pointer;
+    padding: 4px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* === MODO SERIO === */
+body.serious {
+    background: #f0f2f5;
+}
+
+body.serious #dvd {
+    display: none;
+}
+
+body.serious .main-window {
+    animation: none !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff !important;
+}
+
+body.serious .title-bar {
+    background: linear-gradient(135deg, #1e3a5f, #2d5986) !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    padding: 12px 16px !important;
+}
+
+body.serious .title-bar-text {
+    color: #fff !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+body.serious .title-bar-text::after {
+    display: none;
+}
+
+body.serious .title-bar-controls {
+    display: none;
+}
+
+body.serious .window-body {
+    background: #fff !important;
+    padding: 20px !important;
+}
+
+body.serious fieldset {
+    border-image: none !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 6px;
+    padding: 12px 16px !important;
+}
+
+body.serious legend {
+    color: #1e3a5f !important;
+    font-weight: 700;
+    padding: 0 6px;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+body.serious #toggle-btn {
+    background: #1e3a5f !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 6px !important;
+    padding: 8px 18px !important;
+    font-size: 13px !important;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+body.serious #toggle-btn:hover {
+    background: #2d5986 !important;
+}
+
+body.serious #toggle-btn:active {
+    background: #163059 !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
 /* === IMPRESIÓN / EXPORTAR PDF === */
 @media print {
     body {
@@ -256,7 +318,8 @@ body {
         margin: 0;
     }
 
-    #dvd {
+    #dvd,
+    #mode-toggle {
         display: none;
     }
 

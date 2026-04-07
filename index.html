@@ -9,6 +9,10 @@
 </head>
 <body>
 
+    <div id="mode-toggle">
+        <button id="toggle-btn" onclick="toggleMode()">Modo Serio</button>
+    </div>
+
     <img id="dvd" src="https://i.pinimg.com/originals/3e/ce/76/3ece7660379bbb66349b44d0eb901063.gif" alt="">
 
     <div class="desktop">
@@ -29,8 +33,7 @@
                 <fieldset>
                     <legend>Información de Contacto</legend>
                     <div class="contact-layout">
-                        <img src="src/perfil.jpg" alt="Foto de perfil" class="profile-photo">
-                        <div class="contact-info">
+<div class="contact-info">
                             <p class="contact-name"><strong>Renato Campos González</strong><span class="contact-title"> — Tecnólogo en Telecomunicaciones</span></p>
                             <p>
                                 <span class="ci">Correo: Renaxd13@gmail.com</span><span class="sep"> | </span><span class="ci">Fono: +56 9 5702 8226</span>
@@ -210,5 +213,16 @@
 
     </div><!-- /desktop -->
 
+    <script>
+        function toggleMode() {
+            const serious = document.body.classList.toggle('serious');
+            document.getElementById('toggle-btn').textContent = serious ? 'Modo Personal' : 'Modo Serio';
+            localStorage.setItem('cv-mode', serious ? 'serious' : 'personal');
+        }
+        if (localStorage.getItem('cv-mode') === 'serious') {
+            document.body.classList.add('serious');
+            document.getElementById('toggle-btn').textContent = 'Modo Personal';
+        }
+    </script>
 </body>
 </html>
